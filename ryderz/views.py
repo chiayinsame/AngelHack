@@ -43,10 +43,40 @@ class TeacherSignUpForm(forms.ModelForm):
         ]
 
 def index(request):
-  form = SignInForm()
-  return render(request, "ryderz/index.html", {
-    'form': form
-  })
+  if request.method == 'POST':
+     form = SignInForm(request.POST)
+     if form.is_valid():
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        type = form.cleaned_data['type']
+        if type == "Tutor":
+          try:
+            tutor = Tutor.objects.get(username=username, password=password)
+            return render(request, "ryderz/tutor_profile.html", {
+            'tutor': tutor,
+            'username': tutor.username,
+            'name': tutor.name,
+            'birthday': tutor.birthday,
+            'email': tutor.email,
+            'phone_number': tutor.phone_number,
+            'contact_method': tutor.contact_method,
+            'university': tutor.university,
+            'availability': tutor.availability,
+            'picture': tutor.picture,
+            'resume': tutor.resume,
+            'about_me': tutor.about_me,
+            'sex': tutor.sex
+          })
+          except Tutor.DoesNotExist:
+            form = SignInForm()
+            return render(request, "ryderz/index.html", {
+              'form': form
+            })
+  else:
+    form = SignInForm()
+    return render(request, "ryderz/index.html", {
+      'form': form
+    })
 
 def tutor_signup(request):
       if request.method == 'POST':
