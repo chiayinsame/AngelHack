@@ -23,4 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Set the value of the hidden input field
         document.getElementById("id_type").value = "Student";
     });
+
+    document.getElementById('Signup_Button').addEventListener('click', function() {
+        window.location.href = "http://127.0.0.1:8000/ryderz/signup";
+    });
 });
