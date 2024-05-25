@@ -14,13 +14,35 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 15px;
 }
 
 .button-container button {
   padding: 10px 20px;
   background-color: silver;
+  border-radius: 12px;
 }
 
 .centered-text {
   text-align: center;
+}
+
+#Signup_Button {
+  top: 5;
+  position: fixed;
+  right: 0;
+  gap: 10px;
+  height: 25px;
+  width: auto;
+  font-size: larger;
+  background-color: silver;
+}
+
+/* Assuming you have a stylesheet (e.g., styles.css) */
+
+.form-control {
+  margin-bottom: 20px; /* Adjust the spacing between fields */
+  padding: 10px;
+  width: 50%;
+  box-sizing: border-box;
 }

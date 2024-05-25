@@ -1,10 +1,24 @@
 from django.shortcuts import render
 from django import forms
 
+from django import forms
+
 class SignInForm(forms.Form):
-  username = forms.CharField(max_length=32, label="Username")
-  password = forms.CharField(max_length=64, label="Password")
-  type = forms.CharField(widget=forms.HiddenInput(), initial='none')
+    username = forms.CharField(
+        max_length=32,
+        label="Username",
+        widget=forms.TextInput(attrs={'class': 'form-control username-field'})
+    )
+    password = forms.CharField(
+        max_length=64,
+        label="Password",
+        widget=forms.PasswordInput(attrs={'class': 'form-control password-field'})
+    )
+    type = forms.CharField(
+        widget=forms.HiddenInput(),
+        initial='none'
+    )
+
 
 class TeacherSignUpForm(forms.Form):
   CHOICES = [
