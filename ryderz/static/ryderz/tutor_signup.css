@@ -1,0 +1,35 @@
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center; /* Align form elements to the center */
+}
+/* Style form labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left; /* Align labels to the left */
+}
+/* Style form inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}

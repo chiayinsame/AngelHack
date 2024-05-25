@@ -25,10 +25,10 @@ class TeacherSignUpForm(forms.Form):
   email = forms.EmailField(max_length=256, label="Email") 
   sex = forms.ChoiceField(choices=GENDERS, label='Select Your Gender')
   birthday = forms.DateField(label="Date Of Birth")
-  phone_number = forms.IntegerField(min_value=8, max_value=8, label="Phone Number")
+  phone_number = forms.IntegerField(min_value=80000000, max_value=99999999, label="Phone Number")
   contact_method = forms.ChoiceField(choices=CHOICES, label='Select Preferred Contact Method')
-  university = forms.CharField(max_length=256, label='Univeristy')
-  availability = forms.CharField(max_length=256, label='Available Times')
+  university = forms.CharField(max_length=256, label='University')
+  availability = forms.CharField(max_length=256, label='Availability (Date and Time)')
   resume = forms.CharField(max_length=1024, label='Resume')
   about_me = forms.CharField(max_length=1024, label='About Me')
   picture = forms.ImageField()
@@ -45,3 +45,5 @@ def tutor_signup(request):
     'form': form
   })
 
+def signup(request):
+  return render(request, "ryderz/signup.html")

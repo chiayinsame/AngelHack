@@ -5,12 +5,11 @@ body {
     "Noto Sans", "NotoSans-fallback", "NotoSans-fallback-android", sans-serif;
 }
 
-h2 {
-  margin-bottom: 75px;
-  margin-left: 30px;
+.main_text {
+  text-align: center;
 }
 
-.button-container {
+.button_container {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -21,6 +20,7 @@ h2 {
   background-color: silver;
 }
 
-.centered-text {
-  text-align: center;
+h1 {
+  margin-bottom: 75px;
+  margin-left: 30px;
 }
