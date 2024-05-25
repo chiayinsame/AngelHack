@@ -1,11 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hello World!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'ryderz/index.css' %}" />
+    <title>Aiducate</title>
+  </head>
+  <body>
+    <h1>Aiducate&copy;</h1>
+    <h2>where students give back.</h2>
+    <div class="centered-text">
+      <h3>Welcome! Please sign in.</h3>
+      <h4>I am a:</h4>
+      <div class="button-container">
+        <button id="Tutor_Button">Tutor</button>
+        <button id="Student_Button">Student</button>
+      </div>
+    </div>
+  </body>
 </html>

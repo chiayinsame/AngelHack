@@ -1,3 +1,27 @@
 body {
-    color:white;
+  color: rgb(239, 188, 78);
+  background-color: #102464;
+  font-family: "Figtree", "Figtree-fallback", "Figtree-fallback-android",
+    "Noto Sans", "NotoSans-fallback", "NotoSans-fallback-android", sans-serif;
+}
+
+h2 {
+  margin-bottom: 75px;
+  margin-left: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background-color: silver;
+}
+
+.centered-text {
+  text-align: center;
+  align-items: center;
 }
