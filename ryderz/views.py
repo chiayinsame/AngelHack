@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django import forms
 
+class SignInForm(forms.Form):
+  username = forms.CharField(max_length=32, label="Username")
+  password = forms.CharField(max_length=64, label="Password")
+  type = forms.CharField(widget=forms.HiddenInput(), initial='none')
+
 class TeacherSignUpForm(forms.Form):
   CHOICES = [
     ('whatsapp', 'Whatsapp'),
@@ -29,7 +34,10 @@ class TeacherSignUpForm(forms.Form):
   picture = forms.ImageField()
 
 def index(request):
-  return render(request, "ryderz/index.html")
+  form = SignInForm()
+  return render(request, "ryderz/index.html", {
+    'form': form
+  })
 
 def tutor_signup(request):
   form = TeacherSignUpForm()
