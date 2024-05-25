@@ -37,3 +37,5 @@ def tutor_signup(request):
     'form': form
   })
 
+def signup(request):
+  return render(request, "ryderz/signup.html")
