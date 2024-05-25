@@ -23,7 +23,7 @@ textarea {
   box-sizing: border-box;
 }
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: rgb(202, 201, 201);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -31,5 +31,5 @@ input[type="submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: rgba(81, 79, 79, 0.566);
 }
