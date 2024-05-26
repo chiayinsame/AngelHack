@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'ryderz/tutor_profile.css' %}" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <h1>Tutor Profile</h1>
+    <h2>About Me</h2>
+    <h3>Name:</h3>
+    <div class="name">{{ name }}</div>
+    <h3>Gender</h3>
+    <div class="gender">{{ sex }}</div>
+    <h3>Email:</h3>
+    <div class="email">{{ email }}</div>
+    <h3>Phone Number</h3>
+    <div class="phone_number">{{ phone_number }}</div>
+    <h3>Preferred Contact Method</h3>
+    <div class="contact_method">{{ contact_method }}</div>
+    <h3>Birthday:</h3>
+    <div class="birthday">{{ birthday }}</div>
+    <h3>university</h3>
+    <div class="university">{{ university }}</div>
+    <h3>Subjects I Teach</h3>
+    <div class="preferred_subjects">
+      {% for subject in tutor.subjects.all %}
+      <li>{{ subject.name }}</li>
+      {% endfor %}
+    </div>
+    <h3>availability</h3>
+    <div class="availability">{{ availability }}</div>
+    <h3>Summary</h3>
+    <div class="summary">{{ about_me }}</div>
+    <h3>Resume</h3>
+    <div class="resume">{{ resume }}</div>
+  </body>
+</html>
